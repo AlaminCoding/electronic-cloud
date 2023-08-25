@@ -22,6 +22,7 @@ const filterClose = () => {
 };
 
 function handleFd() {
+  closeAside();
   if (fdOpen) {
     filterClose();
   } else {
@@ -121,6 +122,7 @@ const closeUser = () => {
 };
 
 const toggleUser = () => {
+  closeAside();
   if (userOpen) {
     closeUser();
   } else {
