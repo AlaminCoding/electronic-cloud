@@ -1,0 +1,38 @@
+$lightGray: #f6f6f6;
+$borderGray: #f0f0f0;
+$blue: #51459e;
+$lightBlue: #7c8db5;
+$darkBlue: #25396f;
+$navlinkBg: #eceff7;
+$navlinkTxt: #7987a5;
+$navlinkActive: #1c295d;
+$cyan: #84e8f4;
+$barInner: #f6f9ff;
+$coral: #ff6e91;
+$title: #505887;
+
+@mixin media-xxl {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+@mixin media-xl {
+  @media screen and (min-width: 1366px) {
+    @content;
+  }
+}
+@mixin media-lg {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin media-sm {
+  @media screen and (min-width: 450px) {
+    @content;
+  }
+}
