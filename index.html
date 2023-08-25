@@ -20,7 +20,7 @@
   <body>
     <header class="main-container">
       <div class="logo">
-        <div class="aside-toggle" onclick="toggleAside()">
+        <div class="aside-toggle">
           <i class="fa-solid fa-indent"></i>
         </div>
         <a href="#">
@@ -29,24 +29,18 @@
         </a>
       </div>
       <div class="search-filter">
-        <i
-          class="fa-solid fa-magnifying-glass search-btn"
-          onclick="openSearch()"
-        ></i>
+        <i class="fa-solid fa-magnifying-glass search-btn"></i>
         <div class="search-box">
           <img src="/search-icon.svg" alt="Search Icon" />
           <input type="text" placeholder="Search Files..." />
-          <i
-            class="fa-solid fa-xmark search-close-btn"
-            onclick="closeSearch()"
-          ></i>
+          <i class="fa-solid fa-xmark search-close-btn"></i>
         </div>
         <div class="filter-box">
-          <div class="filter-title" onclick="handleFd()">
+          <div class="filter-title">
             <p>Filter</p>
             <i class="fa-solid fa-chevron-down" id="filter-arrow"></i>
           </div>
-          <i class="fa-solid fa-filter filter-btn" onclick="handleFd()"></i>
+          <i class="fa-solid fa-filter filter-btn"></i>
           <ul class="filter-dropdown">
             <li>Filter one</li>
             <li>Filter two</li>
@@ -60,7 +54,7 @@
           <img src="/Bell.png" alt="notification icon" />
           <span class="mark"></span>
         </div>
-        <i class="fa-solid fa-user user-btn" onclick="toggleUser()"></i>
+        <i class="fa-solid fa-user user-btn"></i>
         <div class="user">
           <img src="/user.png" alt="" />
           <div class="name-email">
@@ -383,7 +377,7 @@
           <button class="main-btn">Add More Space</button>
         </div>
       </aside>
-      <div class="aside-overlay" onclick="closeAside()"></div>
+      <div class="aside-overlay"></div>
       <section class="panel">
         <div class="main-panel">
           <div class="folders">
@@ -750,6 +744,6 @@
         </div>
       </section>
     </main>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>

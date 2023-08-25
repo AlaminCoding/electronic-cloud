@@ -1,6 +1,8 @@
 const filterBox = document.querySelector(".filter-box");
 const filterDropdown = document.querySelector(".filter-dropdown");
 const filterArrow = document.getElementById("filter-arrow");
+const filerTitle = document.querySelector(".filter-title");
+const filterBtn = document.querySelector(".filter-btn");
 
 //Show hide filter dropdown
 
@@ -26,6 +28,16 @@ function handleFd() {
     filterOpen();
   }
 }
+
+filerTitle.addEventListener("click", () => {
+  handleFd();
+});
+
+filterBtn.addEventListener("click", () => {
+  handleFd();
+});
+
+// Chart Height Init
 
 const chartBars = document.querySelectorAll(".bar");
 chartBars.forEach((e) => {
@@ -63,18 +75,33 @@ const toggleAside = () => {
   }
 };
 
+asideToggle.addEventListener("click", () => {
+  toggleAside();
+});
+asideOverlay.addEventListener("click", () => {
+  closeAside();
+});
+
 // Search Open close
 
 const searchBox = document.querySelector(".search-box");
+const searchBtn = document.querySelector(".search-btn");
+const closeSearchBtn = document.querySelector(".search-close-btn");
 
 const openSearch = () => {
   searchBox.classList.add("open-search");
   filterClose();
   closeUser();
 };
+searchBtn.addEventListener("click", () => {
+  openSearch();
+});
 const closeSearch = () => {
   searchBox.classList.remove("open-search");
 };
+closeSearchBtn.addEventListener("click", () => {
+  closeSearch();
+});
 
 // User open close
 
@@ -100,6 +127,10 @@ const toggleUser = () => {
     openUser();
   }
 };
+
+userBtn.addEventListener("click", () => {
+  toggleUser();
+});
 
 document.addEventListener("click", (e) => {
   if (e.target != filterBox && !filterBox.contains(e.target)) {
